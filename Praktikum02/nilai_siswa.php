@@ -1,11 +1,10 @@
 <?PHP 
 //Tangkap Hasil Inputan
-$proses = $_POST["kirim"];
-$nama_siswa = $_POST["Nama"];
-$mata_kuliah = $_POST["MATKUL"];
-$nilai_uts = $_POST["UTS"];
-$nilai_uas = $_POST["UAS"];
-$nilai_tugas = $_POST["TUGAS"];
+$nama_siswa = isset($_POST["Nama"]) ? $_POST["Nama"] : '';
+$mata_kuliah = isset($_POST["MATKUL"]) ? $_POST["MATKUL"] : '';
+$nilai_uts = isset($_POST["UTS"]) ? $_POST["UTS"] : 0;
+$nilai_uas = isset($_POST["UAS"]) ? $_POST["UAS"] : 0;
+$nilai_tugas = isset($_POST["TUGAS"]) ? $_POST["TUGAS"] : 0;
 
 //Buat Variable Total Nilai 
 $total_nilai = ($nilai_uts + $nilai_uas + $nilai_tugas) / 3;
